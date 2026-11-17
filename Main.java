@@ -255,6 +255,7 @@ public class Main{
                     if (rodada % 2 == 0){ // *Nas rodadas pares, o dano calculado receberá um bônus de 5.
                         dano = dano + 5;
                     }
+                    dano = defensor.reduzirDanoRecebido(dano);
                     defensor.perderEnergia(dano);
                     System.out.println(atacante.getNome() + " atacou " + defensor.getNome());
                     System.out.println("Dano causado: " + dano);
